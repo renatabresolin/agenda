@@ -1,0 +1,24 @@
+  <div class="card login-card">
+  <div class="card-body">
+    <%= form_for(room) do |f| %>
+
+      <% if room.errors.any? %>
+        <div class="alert alert-danger">
+          <% room.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </div>
+      <% end %>
+
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+
+      <%= f.submit t('submit.create'), class: "btn btn-success" %>
+      <%= link_to 'Voltar', rooms_path, class: "btn btn-primary float-right" %>
+
+
+    <% end %>
+  </div>
+</div>

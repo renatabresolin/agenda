@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-body">
+    <%= flash_message.html_safe %>
+    <h4 class="card-title"><%= @room.name %></h4>
+      <%= month_calendar(events: @reservations) do |date, reservations| %>
+        <%= link_to  date.day, new_room_reservation_url(date: date, room_id: @room.id) %>
+
+        <% reservations.each do |reservation| %>
+          <div>
+            <li><%= link_to  "#{reservation.start_time.hour}h #{reservation.name}", room_reservation_url(id: reservation.id, room_id: @room.id) %></li>
+          </div>
+        <% end %>
+      <% end %>
+
+    <form class="form-inline">
+      <div class="container-fluid">
+        <%= link_to t("delete"), @room, data: { confirm: t("delete_confirm") }, method: :delete, class: "btn btn-danger " %>
+        <%= link_to t("back"), rooms_path, class: "btn btn-primary float-right", role: "button" %>
+      </div>
+    </form>
+  </div>
+</div>
