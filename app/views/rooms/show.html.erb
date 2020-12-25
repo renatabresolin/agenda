@@ -1,6 +1,6 @@
 <div class="card">
   <div class="card-body">
-    <%= flash_message.html_safe %>
+    <%#= flash_message.html_safe %>
     <h4 class="card-title"><%= @room.name %></h4>
       <%= month_calendar(events: @reservations) do |date, reservations| %>
         <%= link_to  date.day, new_room_reservation_url(date: date, room_id: @room.id) %>

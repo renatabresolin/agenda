@@ -2,6 +2,11 @@ require_relative 'boot'
 
 require 'rails/all'
 
+config.i18n.default_locale = "pt-BR"
+I18n.enforce_available_locales = false
+
+# config.time_zone = "Brasilia"
+# config.active_record.default_timezone = :local
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)

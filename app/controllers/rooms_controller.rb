@@ -6,7 +6,7 @@ class RoomsController < ApplicationController
   end
 
   def show
-    @reservations = Room.reservations
+    @reservations = @room.reservations
   end
 
   def new

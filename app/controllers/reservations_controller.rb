@@ -23,10 +23,10 @@ class ReservationsController < ApplicationController
 
     if @reservation.save
       flash[:success] = "Sua reunião foi agendada com sucesso!"
-      redirect_to room_path
+      redirect_to room_path(set_room)
     else
       flash[:danger] = "O horário não está disponível"
-      redirect_to room_path
+      redirect_to room_path(set_room)
     end
   end
 
@@ -43,7 +43,7 @@ class ReservationsController < ApplicationController
   end
 
   def set_room
-    @room = Room.find(params[:oom_id])
+    @room = Room.find(params[:room_id])
   end
 
   def reservation_params

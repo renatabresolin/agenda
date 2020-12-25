@@ -1,26 +1,26 @@
 <div class="card login-card">
   <div class="card-body">
-    <h4 class="card-title"><%= t("reservation") %></h4>
+    <h4 class="card-title">DETALHES DA RESERVA</h4>
     <div class="form-group">
-      <label for="reservation_name"> Nome </label>
-      <input name="reservation_name" value=<%= @reservation.name %> class="form-control" disabled></input>
+      <label for="reservation_name"> Reunião:</label>
+      <input name="reservation_name" class="form-control" disabled value=<%= @reservation.name %> ></input>
     </div>
 
     <div class="form-group">
-      <label for="user_name"> Responsável </label>
-      <input name="user_name" value=<%= @reservation.user.email %> class="form-control" disabled></input>
+      <label for="user_name"> Responsável:</label>
+      <input name="user_name" class="form-control" disabled value=<%= @reservation.user.email %> ></input>
     </div>
 
     <div class="form-group">
-      <label for=start_time> Horário</label>
-      <input name="start_time" value=<%= @reservation.start_time %> class="form-control" disabled></input>
+      <label for=start_time> Dia:</label>
+      <input name="start_time" class="form-control" disabled value=<%= @reservation.start_time %> ></input>
     </div>
     <form class="form-inline">
       <div class="container-fluid">
         <% if current_user == @reservation.user %>
-          <%= link_to t("delete"), room_reservation_path(id: @reservation, room_id: @room.id), data: { confirm: t("delete_confirm") }, method: :delete, class: "btn btn-danger " %>
+          <%= link_to 'DELETAR', room_reservation_path(id: @reservation, room_id: @room.id), data: { confirm: "Tem certeza que deseja deletar essa reunião?" }, method: :delete, class: "btn btn-danger " %>
         <% end %>
-        <%= link_to t("back"), room_path([@room]), class: "btn btn-primary float-right", role: "button" %>
+        <%= link_to 'VOLTAR', room_path([@room]), class: "btn btn-primary float-right", role: "button" %>
       </div>
     </form>
   </div>

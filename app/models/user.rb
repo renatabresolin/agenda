@@ -5,5 +5,4 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :reservations, dependent: :destroy
   has_many :rooms, through: :reservations
-  validates :name, presence: true
 end
