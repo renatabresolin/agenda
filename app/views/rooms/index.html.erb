@@ -1,24 +1,24 @@
 <div class="card login-card">
   <div class="card-body">
-    <h4 class="card-title"> Salas de Reunião </h4>
-    <span>Clique em detalhes para conferir dias e horários disponíveis para reuniões.</span><br>
+    <h4 class="card-title text-center"> Salas de Reunião </h4>
+    <span>Clique em detalhes para conferir dias e horários disponíveis para reuniões em casa sala.</span><br>
       <br><ul class="list-group">
         <% @rooms.each do |room| %>
 
-            <li class="list-group-item">
-              <h5>
+            <li class="list-group-item align-center">
+              <h4 class="fw-bold text-start">
                 <%= room.name %>
                 <div class=float-right>
-                  <%= link_to 'DETALHES', room, class: "btn btn-primary" %>
-                  <%= link_to 'DELETAR', room, method: :delete, data: { confirm: 'Tem certeza que deseja deletar esta Sala de Reunião?' }, class: "btn btn-danger" %>
+                  <%= link_to 'DETALHES', room, class: "btn-ghost mr-2" %>
+                  <%= link_to 'APAGAR', room, method: :delete, data: { confirm: 'Tem certeza que deseja APAGAR esta Sala de Reunião?' }, class: "btn-ghost" %>
                 </div>
-              </h5>
+              </h4>
             </li>
 
         <% end %>
       </ul><br>
 
-    <%= link_to 'CRIAR SALA DE REUNIÃO', new_room_path, class: "btn btn-success", role: "Button" %>
+    <%= link_to 'CRIAR SALA DE REUNIÃO', new_room_path, class: "btn-flat" %>
   </div>
 </div>
 

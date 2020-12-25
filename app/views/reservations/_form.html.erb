@@ -14,12 +14,12 @@
       <% end %>
 
       <div class="form-group">
-        <%= f.label :name %>
+        <%= f.label "Título da Reunião:" %>
         <%= f.text_field :name, class: "form-control" %>
       </div>
 
       <div class="form-group">
-        <%= f.label :start_time %>
+        <%= f.label "Horários (08:00 às 18:00):" %>
         <%= f.datetime_select(:start_time, {discard_year: true, discard_minute: true, discard_month: true, start_hour: 8, end_hour: 18}, { class: "form-control"} ) %>
       </div>
       <%= hidden_field_tag 'date', @date %>
@@ -27,8 +27,8 @@
       <%= f.hidden_field :user_id, value: current_user.id %>
 
       <div class="actions">
-        <%= f.submit 'Reservar', class: "btn btn-success" %>
-        <%= link_to t('back'), room_path(@room), class: "btn btn-primary float-right" %>
+        <%= link_to t('back'), room_path(@room), class: "btn btn-success" %>
+        <%= f.submit 'Reservar', class: "btn btn-success float-right" %>
       </div>
     <% end %>
   </div>

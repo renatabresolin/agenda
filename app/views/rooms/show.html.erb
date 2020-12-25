@@ -1,9 +1,8 @@
-<div class="card">
+<div class="card mb-4">
   <div class="card-body">
-    <%#= flash_message.html_safe %>
-    <h4 class="card-title"><%= @room.name %></h4>
+    <h4 class="card-title text-center"> Sala de Reunião: <%= @room.name.upcase %></h4>
       <%= month_calendar(events: @reservations) do |date, reservations| %>
-        <%= link_to  date.day, new_room_reservation_url(date: date, room_id: @room.id) %>
+        <%= link_to date.day, new_room_reservation_url(date: date, room_id: @room.id) %>
 
         <% reservations.each do |reservation| %>
           <div>
@@ -14,8 +13,7 @@
 
     <form class="form-inline">
       <div class="container-fluid">
-        <%= link_to t("delete"), @room, data: { confirm: t("delete_confirm") }, method: :delete, class: "btn btn-danger " %>
-        <%= link_to t("back"), rooms_path, class: "btn btn-primary float-right", role: "button" %>
+        <%= link_to 'VOLTAR', rooms_path, class: "btn btn-success float-right", role: "button" %>
       </div>
     </form>
   </div>
