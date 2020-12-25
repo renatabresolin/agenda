@@ -2,7 +2,7 @@ require_relative 'boot'
 
 require 'rails/all'
 
-config.time_zone = 'Brasília Time'
+# config.time_zone = 'Brasília Time'
 
 # config.i18n.default_locale = "pt-BR"
 # I18n.enforce_available_locales = false
