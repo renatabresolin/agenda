@@ -22,18 +22,15 @@ class ReservationsController < ApplicationController
     @reservation.start_time = Time.parse(params[:date]) + @reservation.start_time.hour.hours
 
     if @reservation.save
-      flash[:success] = "Sua reunião foi agendada com sucesso!"
-      redirect_to room_path(set_room)
+      redirect_to room_path(set_room), notice: "Sua reunião foi agendada com sucesso!"
     else
-      flash[:danger] = "O horário não está disponível"
-      redirect_to room_path(set_room)
+      redirect_to room_path(set_room), notice: "Este horário não está disponível!"
     end
   end
 
   def destroy
     @reservation.destroy
-    flash[:success] = "Horario removido com sucesso!"
-    redirect_to @reservation.room
+    redirect_to @reservation.room, notice: "Reserva removida com sucesso!"
   end
 
   private
