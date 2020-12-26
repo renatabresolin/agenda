@@ -2,8 +2,7 @@
 Web app simples no qual os usuários podem reservar salas de reunião.
 
 
-## Status do Projeto
-- Em desenvolvimento :warning:
+## Status do Projeto: Concluido :heavy_check_mark:
 
 
 ## O que a aplicação é capaz de fazer :checkered_flag:
@@ -14,7 +13,7 @@ Web app simples no qual os usuários podem reservar salas de reunião.
 - Nāo é possível reservar uma sala em um horário que já foi reservado, o app envia um alerta para o usuário;
 - É possível reservar vários horários no mesmo dia ou, em dias e meses diferentes;
 - Apenas o usuário que criou a sala de reuniões pode exclui-la;
-- O usuário pode deletar uma reunião agendada, caso não possa comparecer;
+- O usuário que criou a reserva pode deleta-la, caso não possa comparecer;
 
 
 ## Detalhes da Solução aplicada :bulb:

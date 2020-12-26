@@ -1,6 +1,8 @@
 <div class="card mb-4">
   <div class="card-body">
     <h4 class="card-title text-center"> Sala de Reunião: <%= @room.name.upcase %></h4>
+      <p class="text-center">Selecione o DIA para sua reunião e escolha um HORÁRIO disponível.</p>
+
       <%= month_calendar(events: @reservations) do |date, reservations| %>
         <%= link_to date.day, new_room_reservation_url(date: date, room_id: @room.id) %>
 
@@ -13,7 +15,10 @@
 
     <form class="form-inline">
       <div class="container-fluid">
-        <%= link_to 'VOLTAR', rooms_path, class: "btn btn-success float-right" %>
+        <% if @room.owner.to_i == current_user.id %>
+          <%= link_to 'APAGAR SALA', @room, method: :delete, data: { confirm: 'Tem certeza que deseja APAGAR esta Sala?' }, class: "btn-flat-danger float-left" %>
+        <% end %>
+        <%= link_to 'VOLTAR', rooms_path, class: "btn-flat float-right" %>
       </div>
     </form>
   </div>
