@@ -1,14 +1,20 @@
-<h1 align="center"> Agenda de Sala de Reuniões </h1>
-<p align="justify"> Website desenvolvido com o objetivo de criar uma agenda de salas de reuniões online, onde o usuário consegue criar, listar/ver e acessar salas de reuniões, além disso ele consegue reservar um horário para uma reunião. </p>
+<h2 align="center"> Agenda de Sala de Reuniões </h2>
+<p align="justify"> Web app simples no qual os usuários podem reservar salas de reunião. </p>
 
-## O que a plataforma é capaz de fazer :checkered_flag:
+## O que a aplicação é capaz de fazer :checkered_flag:
+> Criar, Listar e Deletar Salas de Reuniāo;
+> Dentro do Calendário é possível clicar na data e reservar um horário para uma reunião;
+> Os horários são das 08:00 às 18:00;
+> Nāo é possível reservar uma sala em um horário que já foi reservado, o app envia um alerta para o usuário;
+> É possível reservar vários horários no mesmo dia ou, em dias e meses diferentes;
+> Apenas o usuário que criou a sala de reuniões pode exclui-la;
+> O usuário pode deletar uma reunião agendada, caso não possa comparecer;
 
 
+## Detalhes da Solução aplicada :bulb:
 
 
-## Deploy da Aplicação com HEROKU: :dash:
-
-/* Aqui estamos usando a tag Quotes do markdown*/
+## Deploy da Aplicação com HEROKU :dash:
 
 > https://agenda-blox.herokuapp.com/
 
