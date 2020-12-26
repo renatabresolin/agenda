@@ -1,5 +1,5 @@
 <h1 align="center"> Agenda de Reuniões </h1>
-:clipboard: - Web app simples no qual os usuários podem reservar salas de reunião.
+:clipboard:  Web app simples no qual os usuários podem reservar salas de reunião.
 
 
 ## Status do Projeto
@@ -39,7 +39,10 @@
 - Installe as dependências:
   - bundle install
   - yarn install
+  - rails db:create
   - rails db:migrate
+  - rails s
+- Agora acesse no browser a porta: http://localhost:3000/
 
 ## Deploy da Aplicação com HEROKU :dash:
 
