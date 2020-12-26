@@ -1,5 +1,5 @@
 <h1 align="center"> Agenda de Reuniões </h1>
-:clipboard:  Web app simples no qual os usuários podem reservar salas de reunião.
+Web app simples no qual os usuários podem reservar salas de reunião.
 
 
 ## Status do Projeto
@@ -7,6 +7,7 @@
 
 
 ## O que a aplicação é capaz de fazer :checkered_flag:
+
 - Criar, Listar e Deletar Salas de Reuniāo;
 - Dentro do Calendário é possível clicar na data e reservar um horário para uma reunião;
 - Os horários são das 08:00 às 18:00;
@@ -25,17 +26,30 @@
 - Cada sala de reuniāo (room), pode ter várias reservas (reservations), e através de uma condição nāo é possível inserir mais de uma reserva em um mesmo horário e na mesma sala (room).
 - Do mesmo modo, cada user pode reservar vários horários diferentes e em diferentes salas.
 
+## Aplicação de Testes :mag_right:
+
+- No terminal:
+  - rails test:system
+
+> Criei testes simples de sistema e unitário usando a gem Capybara.
+1- A primeira verificação é antes de um usuário estar logado, na homepage, verifica se existe a tag '<h2>' com texto "Sala de Reuniões".
+2- Depois criei um usuário fake para que quando o user estiver logado, ele possa criar uma nova sala de reuniões, adcionando um nome à ela.
+3- E por fim, criei um teste que verifica se o usuário cadastrou seu nome de forma captalized, ou seja, com a primeira letra do nome maiúscula e as demais minúsculas.
+
+
 ## Libs utilizadas :books:
 
-> gem Simple Calendar, versão 1.1.0
-> gem Devise
+- gem Simple Calendar, versão 1.1.0
+- gem Devise
+- gem Capybara
 
-## Passos para rodar a aplicação
+
+## Passos para rodar a aplicação :computer:
 
 - No terminal, clone o projeto:
   - git clone git@github.com:renatabresolin/schedule.git
 - Entre na pasta do projeto:
-  - cd YOUR_FOLDER
+  - cd PROJECT_FOLDER
 - Installe as dependências:
   - bundle install
   - yarn install

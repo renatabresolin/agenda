@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "name returns the capitalized name" do
+    user = User.new(name: "john")
+    assert_equal "John", user.name
+  end
 end
+
