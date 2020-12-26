@@ -12,10 +12,12 @@ class RoomsController < ApplicationController
 
   def new
     @room = Room.new
+    @room.owner = current_user.id
   end
 
   def create
     @room = Room.new(room_params)
+    @room.owner = current_user.id
 
     if @room.save
       redirect_to @room
@@ -25,8 +27,12 @@ class RoomsController < ApplicationController
   end
 
   def destroy
-    @room.destroy
-    redirect_to rooms_path
+    if @room.owner.to_i == current_user.id
+      @room.destroy
+      redirect_to root_path
+    else
+      redirect_to root_path
+    end
   end
 
   private

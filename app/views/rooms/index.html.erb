@@ -1,16 +1,15 @@
 <div class="card login-card">
   <div class="card-body">
     <h2 class="card-title text-center"> Salas de Reuniões </h2>
-    <span>Clique em <strong>AGENDA</strong> para conferir dias e horários disponíveis.</span><br>
-      <br><ul class="list-group">
+    <p class="text-center">Clique em <strong>DETALHES</strong> para conferir dias e horários disponíveis.</p><br>
+      <ul class="list-group">
         <% @rooms.each do |room| %>
 
             <li class="list-group-item align-center">
               <h4 class="fw-bold text-start">
                 <%= room.name %>
                 <div class=float-right>
-                  <%= link_to 'AGENDA', room, class: "btn-ghost mr-2" %>
-                  <%= link_to 'APAGAR', room, method: :delete, data: { confirm: 'Tem certeza que deseja APAGAR esta Sala de Reunião?' }, class: "btn-ghost-danger" %>
+                  <%= link_to 'DETALHES', room, class: "btn-ghost mr-2" %>
                 </div>
               </h4>
             </li>
@@ -18,7 +17,7 @@
         <% end %>
       </ul><br>
 
-    <%= link_to 'CRIAR SALA DE REUNIÃO', new_room_path, class: "btn btn-success" %>
+    <%= link_to 'CRIAR SALA DE REUNIÃO', new_room_path, class: "btn-flat float-left" %>
   </div>
 </div>
 
