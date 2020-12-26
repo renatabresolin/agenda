@@ -3,7 +3,7 @@ Web app simples no qual os usuários podem reservar salas de reunião.
 
 
 ## Status do Projeto
-> Em desenvolvimento :warning:
+- Em desenvolvimento :warning:
 
 
 ## O que a aplicação é capaz de fazer :checkered_flag:
@@ -31,10 +31,10 @@ Web app simples no qual os usuários podem reservar salas de reunião.
 - No terminal:
   - rails test:system
 
-> Criei testes simples de sistema e unitário usando a gem Capybara.
-1- A primeira verificação é antes de um usuário estar logado, na homepage, verifica se existe a tag '<h2>' com texto "Sala de Reuniões".
-2- Depois criei um usuário fake para que quando o user estiver logado, ele possa criar uma nova sala de reuniões, adcionando um nome à ela.
-3- E por fim, criei um teste que verifica se o usuário cadastrou seu nome de forma captalized, ou seja, com a primeira letra do nome maiúscula e as demais minúsculas.
+- Criei testes simples de sistema e unitário usando a gem Capybara.
+  - A primeira verificação é antes de um usuário estar logado, na homepage, verifica se existe a tag '<h2>' com texto "Sala de Reuniões".
+  - Depois criei um usuário fake para que quando o user estiver logado, ele possa criar uma nova sala de reuniões, adcionando um nome à ela.
+  - E por fim, criei um teste que verifica se o usuário cadastrou seu nome de forma captalized, ou seja, com a primeira letra do nome maiúscula e as demais minúsculas.
 
 
 ## Libs utilizadas :books:
