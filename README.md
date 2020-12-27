@@ -37,17 +37,18 @@ Web app simples no qual os usuários podem reservar salas de reunião.
 
 ## Libs utilizadas :books:
 
-- gem Simple Calendar, versão 1.1.0
+- gem Simple Calendar
 - gem Devise
 - gem Capybara
 
 
 ## Passos para rodar a aplicação :computer:
 
-- No terminal, clone o projeto:
-  - git clone git@github.com:renatabresolin/schedule.git
-- Entre na pasta do projeto:
+- No GitHub clique em 'Fork'
+- No terminal, acesse a pasta que deseja salvar o projeto:
   - cd PROJECT_FOLDER
+- Faça o clone do projeto:
+  - git clone git@github.com:renatabresolin/schedule.git
 - Installe as dependências:
   - bundle install
   - yarn install
